@@ -1,0 +1,36 @@
+<div nz-row>
+    <div nz-col nzSpan="12" nzOffset="6">
+        <nz-card nzTitle="Form">
+            <form nz-form [nzAutoTips]="autoTips" [formGroup]="formInventoryPeriod">
+                <nz-form-item>
+                    <nz-form-label [nzSpan]="6" nzRequired nzFor="startDate">Start Date</nz-form-label>
+                    <nz-form-control [nzSpan]="12">
+                        <nz-date-picker [nzDisabledDate]="disabledStartDate" formControlName="startDate" id="startDate"
+                            nzFormat="dd-MM-yyyy" (ngModelChange)="onChange($event)">
+                        </nz-date-picker>
+                    </nz-form-control>
+                </nz-form-item>
+                <nz-form-item>
+                    <nz-form-label [nzSpan]="6" nzRequired nzFor="endDate">End Date</nz-form-label>
+                    <nz-form-control [nzSpan]="12">
+                        <nz-date-picker [nzDisabledDate]="disabledEndDate" formControlName="endDate" id="endDate"
+                            nzFormat="dd-MM-yyyy" (ngModelChange)="onChange($event)">
+                        </nz-date-picker>
+                    </nz-form-control>
+                </nz-form-item>
+                <nz-form-item>
+                    <nz-form-label [nzSpan]="6" nzRequired>Reason</nz-form-label>
+                    <nz-form-control [nzSpan]="12" nzErrorTip="Please write something here!">
+                      <textarea formControlName="reason" nz-input rows="3" placeholder="write any thing"></textarea>
+                    </nz-form-control>
+                  </nz-form-item>
+                <nz-form-item nz-row class="register-area">
+                    <nz-form-control [nzSpan]="14" [nzOffset]="6">
+                        <button nz-button nzType="primary" type="button" [disabled]="formInventoryPeriod.invalid"
+                            (click)="saveData()">Save</button>
+                    </nz-form-control>
+                </nz-form-item>
+            </form>
+        </nz-card>
+    </div>
+</div>
