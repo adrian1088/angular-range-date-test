@@ -6,6 +6,8 @@ import { NzFormModule } from 'ng-zorro-antd/form';
 import { NzInputModule } from 'ng-zorro-antd/input';
 import { NzDatePickerModule } from 'ng-zorro-antd/date-picker';
 import { NzButtonModule } from 'ng-zorro-antd/button';
+import { NzDividerModule } from 'ng-zorro-antd/divider';
+import { NzTableModule } from 'ng-zorro-antd/table';
 
 @NgModule({
   declarations: [],
@@ -18,7 +20,9 @@ import { NzButtonModule } from 'ng-zorro-antd/button';
     NzFormModule,
     NzInputModule,
     NzDatePickerModule,
-    NzButtonModule
+    NzButtonModule,
+    NzDividerModule,
+    NzTableModule
   ]
 })
 export class SharedModule { }

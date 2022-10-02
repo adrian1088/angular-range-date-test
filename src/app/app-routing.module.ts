@@ -8,6 +8,11 @@ const routes: Routes = [
     loadChildren: () => import('./pages/mar-reception/mar-reception.module').then(m => m.MarReceptionModule),
     data: { }
   },
+  {
+    path: 'user', 
+    loadChildren: () => import('./pages/user/user.module').then(m => m.UserModule),
+    data: { }
+  },
 ];
 
 @NgModule({

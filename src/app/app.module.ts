@@ -3,7 +3,8 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { MarReceptionModule } from './pages/mar-reception/mar-reception.module';
+import { MarReceptionModule } from './pages/mar-reception/mar-reception.module';  
+import { UserModule } from './pages/user/user.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientJsonpModule, HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -24,6 +25,7 @@ registerLocaleData(es);
     BrowserModule,
     AppRoutingModule,
     MarReceptionModule,
+    UserModule,
     FormsModule,
     HttpClientModule,
     HttpClientJsonpModule,

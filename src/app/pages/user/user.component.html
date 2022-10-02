@@ -1,0 +1,28 @@
+<p>user works!</p>
+<div nz-row>
+    <div nz-col nzSpan="12" nzOffset="6">
+        <nz-card>
+            <nz-divider nzText="Add User" nzOrientation="left"></nz-divider>
+            <app-user-add></app-user-add>
+
+            <nz-divider nzText="List User" nzOrientation="left"></nz-divider>
+            {{users | json}}
+            <nz-table nzSize="small" [nzData]="users">
+                <thead>
+                    <tr>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Email</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let data of users">
+                        <td>{{ data.first_name }}</td>
+                        <td>{{ data.last_name }}</td>
+                        <td>{{ data.email }}</td>
+                    </tr>
+                </tbody>
+            </nz-table>
+        </nz-card>
+    </div>
+</div>

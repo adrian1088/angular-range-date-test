@@ -1,0 +1,27 @@
+<form nz-form [nzAutoTips]="autoTips" [formGroup]="formUser">
+    <nz-form-item>
+        <nz-form-label [nzSpan]="6" nzRequired nzFor="first_name">First Name</nz-form-label>
+        <nz-form-control [nzSpan]="14" nzErrorTip="Please input your first name!">
+            <input nz-input formControlName="first_name" id="first_name" />
+        </nz-form-control>
+    </nz-form-item>
+    <nz-form-item>
+        <nz-form-label [nzSpan]="6" nzRequired nzFor="last_name">Last Name</nz-form-label>
+        <nz-form-control [nzSpan]="14" nzErrorTip="Please input your last name!">
+            <input nz-input formControlName="last_name" id="last_name" />
+        </nz-form-control>
+    </nz-form-item>
+    <nz-form-item>
+        <nz-form-label [nzSpan]="6" nzRequired nzFor="email" >Email
+        </nz-form-label>
+        <nz-form-control [nzSpan]="14" nzErrorTip="The input is not valid E-mail!">
+            <input nz-input formControlName="email" id="email" />
+        </nz-form-control>
+    </nz-form-item>
+    <nz-form-item nz-row class="register-area">
+        <nz-form-control [nzSpan]="14" [nzOffset]="6">
+            <button nz-button nzType="primary" type="button" (click)="saveData()">Save</button>
+        </nz-form-control>
+        <!-- [disabled]="formUser.invalid" -->
+    </nz-form-item>
+</form>
